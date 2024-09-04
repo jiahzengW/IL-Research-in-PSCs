@@ -9,9 +9,6 @@ from sklearn.decomposition import PCA
 from sklearn.model_selection import train_test_split
 import xgboost as xgb
 
-data = pd.read_excel()
-
-
 # Function to get fingerprints
 def get_fingerprints(smiles, weights):
     try:
