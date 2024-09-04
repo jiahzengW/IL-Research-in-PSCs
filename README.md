@@ -43,7 +43,9 @@ Handles the training and application of the Tailored GNN model, using new datase
 - Python 3.8+
 - scikit-learn
 - torch_geometric
-
+...
+...
+  
 - Install the dependencies using:
 ```
 pip install -r requirements.txt
