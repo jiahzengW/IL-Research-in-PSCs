@@ -46,7 +46,4 @@ Handles the training and application of the Tailored GNN model, using new datase
 ...
 ...
   
-- Install the dependencies using:
-```
-pip install -r requirements.txt
-```
+
