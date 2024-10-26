@@ -5,14 +5,12 @@ This repository contains scripts and configurations for data processing, model t
 
 ## Repository Structure
 ```
+├── .gitignore
 ├── Fingerprint framework.py
 ├── IL-Research-in-PSCs.iml
 ├── MDN_framework.py
-├── MDN_Evaluation.py
 ├── README.md
 ├── Tailored GNN_framework.py
-├── Tailored GNN_training&application.py
-├── .gitignore
 ├── misc.xml
 ├── modules.xml
 └── workspace.xml
@@ -29,12 +27,7 @@ Constructs a multimodal deep learning network (MDN) model to predict relevant pr
 ## Tailored GNN_framework.py
 Builds a Tailored Graph Neural Network (GNN) designed for predicting pce using molecular graphs of ionic liquids.
 
-## Tailored GNN_training&application.py
-Handles the training and application of the Tailored GNN model, using new datasets for prediction.
 
-
-## MDN_Evaluation.py
-Evaluates the MDN model’s performance using test data and calculates error metrics such as Mean Absolute Error (MAE).
 
 ## Dependencies
 - matplotlib
