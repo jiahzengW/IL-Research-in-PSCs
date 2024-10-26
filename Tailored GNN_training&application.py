@@ -31,7 +31,7 @@ def evaluate(dataloader, model, criterion, device):
 # Training and Evaluation Loop
 epoch_losses = []
 test_losses = []
-epochs = 400
+epochs = 300
 for epoch in range(epochs):
     train_loss = train(train_dataloader, model, criterion, optimizer, device)
     test_loss = train(test_dataloader, model, criterion, optimizer, device)
@@ -40,25 +40,7 @@ for epoch in range(epochs):
     print(f'Epoch {epoch + 1}, Training Loss: {train_loss}, Testing Loss: {test_loss}')
 
 
-# Visualize the molecule with attention scores
-def visualize_molecule_with_attention(mol, attention_scores):
-    fig, ax = plt.subplots(figsize=(10, 10))
-    norm = plt.Normalize(vmin=0, vmax=1)
-    mol = Chem.Mol(mol)
 
-    def get_color(value):
-        cmap = plt.colormaps.get_cmap('coolwarm')
-        return cmap(norm(value))
-
-    atom_colors = {i: get_color(attention_scores[i]) for i in range(mol.GetNumAtoms())}
-
-    img = SimilarityMaps.GetSimilarityMapFromWeights(mol, attention_scores, colorMap=plt.colormaps.get_cmap('coolwarm'))
-    ax.imshow(img)
-    ax.axis('off')
-    plt.show()
-
-
-# Function to convert test data to an RDKit molecule
 def convert_to_mol(data):
     atom_features = data.x
     bond_features = data.edge_attr
@@ -85,7 +67,6 @@ def convert_to_mol(data):
     return mol
 
 
-# Visualizing the second molecule in the dataset
 second_data = dataset[203]  # Selecting the second molecule
 model.eval()
 with torch.no_grad():
