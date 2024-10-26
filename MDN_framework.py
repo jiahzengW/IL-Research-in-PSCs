@@ -11,8 +11,8 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import EarlyStopping
 from tensorflow.keras.regularizers import l2
 
-# tabular data has 21 features and image data is grayscale with size 64x64
-tabular_feature_size = 21
+# tabular data has nN features and image data is grayscale with size 64x64
+tabular_feature_size = nN
 image_height, image_width, image_channels = 64, 64, 1
 output_size = 1  # Adjust for your specific problem
 
@@ -49,9 +49,6 @@ dual_modal_model.summary()
 X_tabular = np.load()
 X_imageF = np.load()
 y = np.load()
-print("Loaded X_tabular shape:", X_tabular.shape)
-print("Loaded X_imageF shape:", X_imageF.shape)
-print("Loaded y shape:", y.shape)
 
 # Train-test split
 tabular_train_data, tabular_test_data, image_train_data, image_test_data, train_labels, test_labels = train_test_split(
@@ -112,7 +109,7 @@ image_only_model.summary()
 
 #############Using Only Tabular Data:################
 # Code for tabular-only model and training
-tabular_feature_size = 21
+tabular_feature_size = nN
 output_size = 1
 
 # Define the tabular-only model
