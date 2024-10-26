@@ -37,7 +37,6 @@ for data in dataset:
     data.y = (data.y - min_targets) / (max_targets - min_targets + 1e-6)
 
 
-# Simple Attention Layer to apply attention mechanism to node features
 class SimpleAttentionLayer(torch.nn.Module):
     def __init__(self, feature_size):
         super(SimpleAttentionLayer, self).__init__()
@@ -52,7 +51,6 @@ class SimpleAttentionLayer(torch.nn.Module):
         return attended_x
 
 
-# Graph-based neural network for PCE regression
 class PCERegressor(torch.nn.Module):
     def __init__(self, num_node_features, num_edge_features):
         super(PCERegressor, self).__init__()
