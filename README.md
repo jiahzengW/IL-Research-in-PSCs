@@ -1,13 +1,14 @@
 # IL-Research-in-PSCs
 All machine learning frameworks and codes from IL Research in PSCs
 
-This repository contains scripts and configurations for data processing, model training, prediction, and evaluation for IL-Research-in-PSCs using advanced machine learning techniques, including multimodal deep learning network (MDN), dynamic, multifunctional molecular fingerprint framework and tailored Graph Neural Network.
+This repository provides scripts and configurations for data processing, model training, prediction, and evaluation in IL-Research-in-PSCs, leveraging advanced machine learning techniques. Key features include a multimodal deep learning network (MDN), a dynamic multifunctional molecular fingerprint framework, and a tailored Graph Neural Network. The repository focuses on four primary areas: trainable data, ionic liquid molecular descriptors, specific model construction, and model interpretability.
 
 ## Repository Structure
 ```
 ├── .gitignore
 ├── Fingerprint framework.py
 ├── IL-Research-in-PSCs.iml
+├── Interpretability_framework.py
 ├── MDN_framework.py
 ├── README.md
 ├── Tailored GNN_framework.py
@@ -17,15 +18,10 @@ This repository contains scripts and configurations for data processing, model t
 ```
 
 ## Scripts Overview
-## Fingerprint framework.py
-Constructs dynamic, multifunctional molecular fingerprint framework, Processes the molecular structure data into fingerprints suitable for training and prediction.
-
+## Fingerprint_framework.py
 ## MDN_framework.py
-Constructs a multimodal deep learning network (MDN) model to predict relevant properties for perovskite solar cells.
-
-
 ## Tailored GNN_framework.py
-Builds a Tailored Graph Neural Network (GNN) designed for predicting pce using molecular graphs of ionic liquids.
+## Interpretability_framework.py
 
 
 
