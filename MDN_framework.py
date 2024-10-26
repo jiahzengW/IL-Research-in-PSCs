@@ -179,10 +179,6 @@ def create_custom_scatter_plot(y_true, y_pred, model_name, color, marker, r2_sco
     plt.xlabel('Actual PCE(%)', fontsize=12)
     plt.ylabel('Predicted PCE(%)', fontsize=12)
     plt.grid(True, which='both', linestyle='--', linewidth=0.5, color='gray')
-    plt.xlim(0, 25)
-    plt.ylim(0, 25)
-    plt.plot([0, 25], [0, 25], color="black", linestyle='dashed', linewidth=1)
-    plt.text(0.95 * plt.xlim()[1], 0.95 * plt.ylim()[1], f'R2: {r2_score:.3f}', fontsize=9, color=color, ha='right')
 
 # Function to draw combined scatter plots
 def draw_combined_scatter_plot(model, X_tabular_train, X_image_train, y_train, X_tabular_test, X_image_test, y_test, model_name, train_sample_size=200, test_sample_size=50):
