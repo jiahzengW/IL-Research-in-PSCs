@@ -36,7 +36,6 @@ for data in dataset:
         data.edge_attr = (data.edge_attr - min_edge_attr) / (max_edge_attr - min_edge_attr + 1e-6)
     data.y = (data.y - min_targets) / (max_targets - min_targets + 1e-6)
 
-
 class SimpleAttentionLayer(torch.nn.Module):
     def __init__(self, feature_size):
         super(SimpleAttentionLayer, self).__init__()
@@ -111,10 +110,8 @@ model = PCERegressor(num_node_features=10, num_edge_features=3).to(device)
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 criterion = torch.nn.MSELoss()
 
-
 % matplotlib
 inline
-
 
 def train(dataloader, model, criterion, optimizer, device):
     model.train()
