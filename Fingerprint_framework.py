@@ -76,8 +76,6 @@ def mse_model(maccs_weight, ecfp_weight, morgan_weight, pubchem_weight, fcfp_wei
     xg_reg.fit(X_train, y_train)
     y_pred_xgb = xg_reg.predict(X_test)
     return -mean_squared_error(y_test, y_pred_xgb)
-
-
 # Define parameter bounds for Bayesian optimization
 # Parameters need to be adjusted according to different problems and datasets
 pbounds = {
