@@ -11,7 +11,7 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import EarlyStopping
 from tensorflow.keras.regularizers import l2
 
-# tabular data has nN features and image data is grayscale with size 64x64
+#tabular data has nN features and image data is grayscale with size 64x64
 tabular_feature_size = nN
 image_height, image_width, image_channels = 64, 64, 1
 output_size = 1  # Adjust for your specific problem
@@ -35,7 +35,6 @@ concatenated = Concatenate(name='concatenated')([tabular_branch, image_branch])
 dense_layer = Dense(64, activation='relu', kernel_regularizer=l2(0.01))(concatenated)
 dense_layer = BatchNormalization()(dense_layer)
 dense_layer = Dropout(0.3)(dense_layer)
-
 output_layer = Dense(output_size, activation='linear', name='output')(dense_layer)
 
 dual_modal_model = Model(inputs=[tabular_input, image_input], outputs=output_layer)
