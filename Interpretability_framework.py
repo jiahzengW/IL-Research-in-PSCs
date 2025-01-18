@@ -5,8 +5,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from interpret.glassbox import ExplainableBoostingClassifier
 from alibi.explainers import IntegratedGradients
-from interpret import show
 import matplotlib.pyplot as plt
+from interpret import show
 
 # Load dataset and split into train/test set
 X, y = shap.datasets.adult()
