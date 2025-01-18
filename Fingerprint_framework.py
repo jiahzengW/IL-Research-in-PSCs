@@ -1,7 +1,7 @@
 from bayes_opt import BayesianOptimization
 from sklearn.metrics import mean_squared_error
-import numpy as np
 import pandas as pd
+import numpy as np
 from rdkit import Chem
 from rdkit.Chem import AllChem, MACCSkeys, DataStructs
 from sklearn.preprocessing import StandardScaler
