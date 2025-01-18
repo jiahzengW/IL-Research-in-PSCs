@@ -110,8 +110,6 @@ model = PCERegressor(num_node_features=10, num_edge_features=3).to(device)
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 criterion = torch.nn.MSELoss()
 
-% matplotlib
-inline
 
 def train(dataloader, model, criterion, optimizer, device):
     model.train()
