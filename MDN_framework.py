@@ -11,7 +11,7 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import EarlyStopping
 from tensorflow.keras.regularizers import l2
 
-#tabular data has nN features and image data is grayscale with size 64x64
+
 tabular_feature_size = nN
 image_height, image_width, image_channels = 64, 64, 1
 output_size = 1  # Adjust for your specific problem
@@ -54,7 +54,7 @@ tabular_train_data, tabular_test_data, image_train_data, image_test_data, train_
     X_tabular, X_imageF, y, test_size=0.2, random_state=42
 )
 
-# Display some information about the data
+
 print("Tabular data shape:", tabular_train_data.shape)
 print("Image data shape:", image_train_data.shape)
 print("Labels shape:", train_labels.shape)
@@ -83,11 +83,11 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.callbacks import EarlyStopping
 from sklearn.metrics import r2_score
-# Assuming image data is grayscale with size 64x64
+
 image_height, image_width, image_channels = 64, 64, 1
 output_size = 1
 
-# Define the image-only model
+
 image_input = Input(shape=(image_height, image_width, image_channels), name='image_input')
 image_branch = Conv2D(16, (3, 3), activation='relu')(image_input)
 image_branch = MaxPooling2D((2, 2))(image_branch)
@@ -204,13 +204,6 @@ def draw_combined_scatter_plot(model, X_tabular_train, X_image_train, y_train, X
     plt.legend(handles=[train_marker, test_marker], loc='upper left', fontsize=9)
 
     plt.show()
-
-# Call the function for combined scatter plot
-draw_combined_scatter_plot(dual_modal_model, tabular_train_data, image_train_data, train_labels, tabular_test_data, image_test_data, test_labels, "Dual Modal Model")
-
-
-
-
 
 # Train-test split
 image_train_data, image_test_data, train_labels, test_labels = train_test_split(
