@@ -3,6 +3,7 @@
 /workspace.xml
 # HTTP client request based on an editor
 /httpRequests/
+
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
