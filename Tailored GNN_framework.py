@@ -12,6 +12,8 @@ all_x = torch.cat([data.x for data in dataset], dim=0)
 all_edge_attr = torch.cat([data.edge_attr for data in dataset], dim=0)
 all_targets = torch.cat([data.y for data in dataset], dim=0)
 
+
+
 # Normalize node features (x)
 min_x = all_x.min(dim=0)[0]
 max_x = all_x.max(dim=0)[0]
