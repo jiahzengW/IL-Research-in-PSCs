@@ -30,6 +30,7 @@ image_branch = MaxPooling2D((2, 2))(image_branch)
 image_branch = Flatten()(image_branch)
 image_branch = Dropout(0.4)(image_branch)
 
+
 concatenated = Concatenate(name='concatenated')([tabular_branch, image_branch])
 
 dense_layer = Dense(64, activation='relu', kernel_regularizer=l2(0.01))(concatenated)
